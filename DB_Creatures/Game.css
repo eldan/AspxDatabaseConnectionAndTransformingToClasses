@@ -1,0 +1,15 @@
+body {
+  background-color: green;
+  background-image: url('images/map.png');
+}
+.postionCreature {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.CreatureProperty{
+    background-color:darkgreen;
+    color:antiquewhite;
+    padding:5px;
+    border-radius:5px
+}
