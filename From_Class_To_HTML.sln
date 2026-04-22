@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35506.116 d17.12
+VisualStudioVersion = 17.12.35506.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DB_Creatures", "DB_Creatures\DB_Creatures.csproj", "{127658D9-5283-4CFB-9546-789A82A58625}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DB_Example", "DB_Creatures\DB_Example.csproj", "{127658D9-5283-4CFB-9546-789A82A58625}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +18,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B62298CE-D97D-4ACD-B192-20017A7C94EA}
 	EndGlobalSection
 EndGlobal

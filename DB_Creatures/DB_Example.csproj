@@ -67,9 +67,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\db_creature.mdf" />
-    <Content Include="App_Data\db_creature_log.ldf">
-      <DependentUpon>db_creature.mdf</DependentUpon>
+    <Content Include="App_Data\DB_Eldan.mdf" />
+    <Content Include="App_Data\DB_Eldan_log.ldf">
+      <DependentUpon>DB_Eldan.mdf</DependentUpon>
     </Content>
     <Content Include="GamePage.aspx" />
     <Content Include="Game.css" />
@@ -78,6 +78,7 @@
     <Content Include="Images\Creatures\sheep.png" />
     <Content Include="Images\map.png" />
     <Content Include="LoginExamplePage.aspx" />
+    <Content Include="RegisterExamplePage.aspx" />
     <Content Include="ShowCreaturesTablePage.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -98,6 +99,13 @@
       <DependentUpon>LoginExamplePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegisterExamplePage.aspx.cs">
+      <DependentUpon>RegisterExamplePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegisterExamplePage.aspx.designer.cs">
+      <DependentUpon>RegisterExamplePage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ShowCreaturesTablePage.aspx.cs">
       <DependentUpon>ShowCreaturesTablePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

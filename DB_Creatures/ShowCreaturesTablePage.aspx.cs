@@ -14,7 +14,7 @@ namespace DB_Creatures
   {
     protected void Page_Load(object sender, EventArgs e)
     {
-      //GenerateLotsOfItems();
+      GenerateLotsOfItems();
       if (IsPostBack)
       {
         if (Request.Form["delete"]!=null)
