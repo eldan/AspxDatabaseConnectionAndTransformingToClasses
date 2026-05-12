@@ -67,30 +67,51 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminPage.aspx" />
+    <Content Include="App_Data\Database1.mdf" />
+    <Content Include="App_Data\Database1_log.ldf">
+      <DependentUpon>Database1.mdf</DependentUpon>
+    </Content>
     <Content Include="App_Data\DB_Eldan.mdf" />
     <Content Include="App_Data\DB_Eldan_log.ldf">
       <DependentUpon>DB_Eldan.mdf</DependentUpon>
     </Content>
-    <Content Include="GamePage.aspx" />
-    <Content Include="Game.css" />
     <Content Include="Images\Creatures\chicken.png" />
     <Content Include="Images\Creatures\cow.png" />
     <Content Include="Images\Creatures\sheep.png" />
     <Content Include="Images\map.png" />
     <Content Include="LoginExamplePage.aspx" />
+    <Content Include="PetFoodImages\2bmWbPTKc7fM4ODd6nEDT.png" />
+    <Content Include="PetFoodImages\posfdsa3_38djdA.png" />
+    <Content Include="PetFoodImages\9383jsfdsafdASA.png" />
+    <Content Include="PetFoodPage.aspx" />
     <Content Include="RegisterExamplePage.aspx" />
-    <Content Include="ShowCreaturesTablePage.aspx" />
+    <Content Include="UploadImagePage.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Creature.cs" />
-    <Compile Include="GamePage.aspx.cs">
-      <DependentUpon>GamePage.aspx</DependentUpon>
+    <Compile Include="AdminPage.aspx.cs">
+      <DependentUpon>AdminPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="GamePage.aspx.designer.cs">
-      <DependentUpon>GamePage.aspx</DependentUpon>
+    <Compile Include="AdminPage.aspx.designer.cs">
+      <DependentUpon>AdminPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PetFoodPage.aspx.cs">
+      <DependentUpon>PetFoodPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PetFoodPage.aspx.designer.cs">
+      <DependentUpon>PetFoodPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UploadImagePage.aspx.cs">
+      <DependentUpon>UploadImagePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UploadImagePage.aspx.designer.cs">
+      <DependentUpon>UploadImagePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\DBHelper.cs" />
     <Compile Include="LoginExamplePage.aspx.cs">
       <DependentUpon>LoginExamplePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -106,16 +127,9 @@
     <Compile Include="RegisterExamplePage.aspx.designer.cs">
       <DependentUpon>RegisterExamplePage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ShowCreaturesTablePage.aspx.cs">
-      <DependentUpon>ShowCreaturesTablePage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ShowCreaturesTablePage.aspx.designer.cs">
-      <DependentUpon>ShowCreaturesTablePage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="App_Code\DatabaseHelper.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\DB_Example.laccdb" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

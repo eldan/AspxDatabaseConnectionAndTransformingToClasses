@@ -1,8 +1,9 @@
-using DB_Creatures.Utils;
+
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -15,7 +16,7 @@ namespace DB_Creatures
     protected void Page_Load(object sender, EventArgs e)
     {
 
-      string emailToAdd = "fakeuser4@gmail.com";
+      string emailToAdd = "fakeuser8@gmail.com";
       string userPasswordToAdd = "123456";
       string pNameToAdd = "Oy";
       string fNameToAdd = "Vey";
@@ -29,27 +30,23 @@ namespace DB_Creatures
       }
       // check that email is not occupied by another user
       string checkEmailQuery = $"SELECT * FROM Users WHERE Email = '{emailToAdd}'";
-      DataTable dt = DatabaseHelper.ExecuteDataTable(checkEmailQuery);
+      DataTable dt = Utils.DBHelper.ExecuteDataTable(checkEmailQuery);
 
       if (dt.Rows.Count > 0)
       {
         msg = "Email is already occupied.";
-        return;
+      
       }
+        else
+        {
+                string query = $"INSERT INTO Users (Email, UserPassword,PName, FName, Address) VALUES ('{emailToAdd}', '{userPasswordToAdd}','{pNameToAdd}', '{fNameToAdd}','{fakeAddress}') ";
+                int res = Utils.DBHelper.DoQuery(query);
+                if (res > 0)
+                {
+                    msg = "User was Added";
+                }
+        }
 
-      string query = $"INSERT INTO Users (Email, UserPassword, PName, FName, Address) " +
-                     $"VALUES ('{emailToAdd}', '{userPasswordToAdd}', '{pNameToAdd}', '{fNameToAdd}', '{fakeAddress}')";
-
-      int rowsAffected = DatabaseHelper.DoQuery(query);
-
-      if (rowsAffected > 0)
-      {
-        msg = "User registered successfully.";
-      }
-      else
-      {
-        msg = "Failed to register user";
-      }
     }
   }
 }
