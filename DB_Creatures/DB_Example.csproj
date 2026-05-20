@@ -76,6 +76,7 @@
     <Content Include="App_Data\DB_Eldan_log.ldf">
       <DependentUpon>DB_Eldan.mdf</DependentUpon>
     </Content>
+    <Content Include="ContactMe.aspx" />
     <Content Include="Images\Creatures\chicken.png" />
     <Content Include="Images\Creatures\cow.png" />
     <Content Include="Images\Creatures\sheep.png" />
@@ -86,6 +87,7 @@
     <Content Include="PetFoodImages\9383jsfdsafdASA.png" />
     <Content Include="PetFoodPage.aspx" />
     <Content Include="RegisterExamplePage.aspx" />
+    <Content Include="SpecificProductPage.aspx" />
     <Content Include="UploadImagePage.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -97,12 +99,26 @@
     <Compile Include="AdminPage.aspx.designer.cs">
       <DependentUpon>AdminPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ContactMe.aspx.cs">
+      <DependentUpon>ContactMe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactMe.aspx.designer.cs">
+      <DependentUpon>ContactMe.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PetFoodPage.aspx.cs">
       <DependentUpon>PetFoodPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="PetFoodPage.aspx.designer.cs">
       <DependentUpon>PetFoodPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SpecificProductPage.aspx.cs">
+      <DependentUpon>SpecificProductPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SpecificProductPage.aspx.designer.cs">
+      <DependentUpon>SpecificProductPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="UploadImagePage.aspx.cs">
       <DependentUpon>UploadImagePage.aspx</DependentUpon>

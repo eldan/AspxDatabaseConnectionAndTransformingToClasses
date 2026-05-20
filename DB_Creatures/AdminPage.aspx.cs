@@ -23,7 +23,7 @@ namespace DB_Creatures
                 Response.Redirect("LoginExamplePage.aspx");
                 return;
             }
-                else
+            else
             {
                 if (IsPostBack)
                 {
@@ -85,7 +85,7 @@ namespace DB_Creatures
             DataTable dt = Utils.DBHelper.ExecuteDataTable(query);
             int numInStock = int.Parse(dt.Rows[0]["NumInStock"].ToString());
 
-            if (numInStock > 0) numInStock -= 1;
+            if (numInStock > 0) numInStock--;
 
             // Third Update the Database
             query = $"UPDATE PetFood SET NumInStock = '{numInStock}' WHERE Id = {Id}";
@@ -134,16 +134,13 @@ namespace DB_Creatures
 
                 if (uploadedFile.ContentLength > maxFileSize)
                 {
-                    lblError =
-                        "File size must be under 500 MB.";
+                    lblError = "File size must be under 500 MB.";
 
                 }
 
-                string uniqueFileName =
-                    GenerateUniqueFileName(fileExtension);
+                string uniqueFileName = GenerateUniqueFileName(fileExtension);
 
-                string imagesFolderPath =
-                    Server.MapPath("~/PetFoodImages/");
+                string imagesFolderPath = Server.MapPath("~/PetFoodImages/");
 
                 if (!Directory.Exists(imagesFolderPath))
                 {
@@ -151,8 +148,7 @@ namespace DB_Creatures
                 }
 
                 string filePath =
-                    Path.Combine(imagesFolderPath,
-                    uniqueFileName);
+                    Path.Combine(imagesFolderPath, uniqueFileName);
 
                 uploadedFile.SaveAs(filePath);
 
@@ -167,23 +163,15 @@ namespace DB_Creatures
                     "Error uploading file: " + ex.Message;
                 return null;
             }
-           
-        }
 
+        }
 
         private string GenerateUniqueFileName(string extension)
         {
             string guid = Guid.NewGuid().ToString("N");
-            string timestamp =
-                DateTime.Now.ToString("yyyyMMddHHmmss");
+            string timestamp = DateTime.Now.ToString("yyyyMMddHHmmss");
 
-            return $"specialimage_{timestamp}_{guid}{extension}";
+            return $"tomthecat_{timestamp}_{guid}{extension}";
         }
-
-
-
-
-
-
     }
 }

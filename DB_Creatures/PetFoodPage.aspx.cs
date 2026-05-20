@@ -14,8 +14,8 @@ namespace DB_Creatures
         protected void Page_Load(object sender, EventArgs e)
         {
            
-           // string query = "SELECT * FROM PetFood ";
-            string query = "SELECT * FROM PetFood WHERE Animal = 'Cat'";
+           string query = "SELECT * FROM PetFood ";
+           //string query = "SELECT * FROM PetFood WHERE Animal = 'Cat'";
             DataTable dt = Utils.DBHelper.ExecuteDataTable(query);
             int len = dt.Rows.Count;
             string dataString = "";
@@ -29,6 +29,7 @@ namespace DB_Creatures
                 dataString += $"<td>{dt.Rows[i]["NumInStock"]}</td>";
                 dataString += $"<td>{dt.Rows[i]["Animal"]}</td>";
                 dataString += $"<td>{dt.Rows[i]["Company"]}</td>";
+                dataString += $"<td><a href='SpecificProductPage.aspx?ProductId={dt.Rows[i]["Id"]}'>Go to Product</a></td>";
                 dataString += "</tr>";
             }
             tableData = dataString;
