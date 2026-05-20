@@ -20,7 +20,7 @@ namespace DB_Creatures
         protected void Page_Load(object sender, EventArgs e)
         {
             string productIdValue = Request.QueryString["ProductId"];
-            string query = "SELECT * FROM PetFood Where Id="+ productIdValue;
+            string query = $"SELECT * FROM PetFood Where Id={productIdValue}";
             DataTable dt = Utils.DBHelper.ExecuteDataTable(query);
             if (dt.Rows.Count >0)
             {

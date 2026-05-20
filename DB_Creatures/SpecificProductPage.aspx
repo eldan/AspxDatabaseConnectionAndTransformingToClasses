@@ -13,6 +13,7 @@
             <img style='height:200px' src='./PetFoodImages/<%=imageProduct %>'/>
             <h1><%=productName %> | (<%=company %>) | Food for <%=animal %></h1>
             <h2>The price is: <%=price %> nis</h2>
+            <div><%= Request.QueryString["exampleParam"]%></div>
         </div>
     </form>
 </body>

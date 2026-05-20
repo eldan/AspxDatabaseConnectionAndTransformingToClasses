@@ -29,7 +29,7 @@ namespace DB_Creatures
                 dataString += $"<td>{dt.Rows[i]["NumInStock"]}</td>";
                 dataString += $"<td>{dt.Rows[i]["Animal"]}</td>";
                 dataString += $"<td>{dt.Rows[i]["Company"]}</td>";
-                dataString += $"<td><a href='SpecificProductPage.aspx?ProductId={dt.Rows[i]["Id"]}'>Go to Product</a></td>";
+                dataString += $"<td><a href='SpecificProductPage.aspx?ProductId={dt.Rows[i]["Id"]}&exampleParam=houmousVeFalafel'>Go to Product</a></td>"; //SpecificProductPage.aspx?ProductId=5&exampleParam=houmousVeFalafel
                 dataString += "</tr>";
             }
             tableData = dataString;

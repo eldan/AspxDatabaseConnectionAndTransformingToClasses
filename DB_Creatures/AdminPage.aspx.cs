@@ -124,6 +124,7 @@ namespace DB_Creatures
                 if (fileExtension != ".jpg" &&
                     fileExtension != ".jpeg" &&
                     fileExtension != ".png")
+
                 {
                     lblError =
                         "Only JPG and PNG formats are allowed.";
